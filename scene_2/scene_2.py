@@ -125,8 +125,8 @@ def solve_ice_with_boxes():
         [1, 0, 4, 0, 0, 4, 0, 1],
         [1, 0, 0, 1, 0, 0, 1, 1],
         [1, 0, 0, 0, 0, 4, 0, 1],
-        [1, 0, 1, 0, 3, 0, 0, 1],
-        [1, 0, 0, 1, 0, 4, 0, 1],
+        [1, 0, 1, 1, 3, 0, 0, 1],
+        [1, 0, 0, 1, 1, 4, 0, 1],
         [1, 1, 1, 1, 1, 1, 1, 1],
     ])
 
@@ -137,7 +137,7 @@ def solve_ice_with_boxes():
     initial_box_positions = [tuple(map(int, pos)) for pos in np.argwhere(grid == 4)]
     num_boxes = len(initial_box_positions)
 
-    max_steps = 500 # Adjust if needed, more complex puzzles might need more steps
+    max_steps = 30 # Adjust if needed, more complex puzzles might need more steps
 
     solver = Solver()
     robot_vars, box_vars, actions = {}, {}, {}
